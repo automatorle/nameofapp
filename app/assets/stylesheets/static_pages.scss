@@ -1,0 +1,41 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//@import 'reset';
+
+/* Mostly: http://ryanfait.com/sticky-footer/ */
+
+$footer-height: 4em;
+
+* {
+    margin: 0;
+}
+
+html, body {
+  height: 80%;
+}
+
+.page-wrapper {
+  min-height: 80%;
+  padding: 1em;
+  /* equal to footer height */
+  margin-bottom: -$footer-height; 
+}
+
+.page-wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, 
+.page-wrapper:after {
+  padding: 1em;
+  /* .push must be the same height as footer */
+    height: $footer-height;
+}
+
+footer {
+  background: lightgray;
+}
+
